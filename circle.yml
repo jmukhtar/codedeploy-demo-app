@@ -1,16 +1,13 @@
-test:
-  override:
-    - php ./test.php
 deployment:
   staging:
     branch: master
     codedeploy:
       circleci-demo-app:
         application_root: /
-        region: us-east-1
+        region: us-west-2
         revision_location:
           revision_type: S3
           s3_location:
-            bucket: glob-bucket-east-1
-            key_pattern: circleci-demo-app-{BRANCH}-{SHORT_COMMIT}
+            bucket: circlecitestsjm
+            key_pattern: circlecitestsjm-demo-practice
         deployment_group: circleci-demo-dg
