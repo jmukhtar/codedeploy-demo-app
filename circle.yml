@@ -1,3 +1,6 @@
+test:
+  overide:
+    - php ./test.php
 deployment:
   staging:
     branch: master
